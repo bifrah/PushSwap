@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 19:31:10 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/11 20:21:21 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_param {
 	int	i;
 	int	j;
+	char	**tmp;
 	char	**dest;
 }				t_param;
 
