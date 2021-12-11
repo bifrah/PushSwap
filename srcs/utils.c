@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 17:13:07 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/11 17:44:39 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ int	ft_inputisnum(char **dest)
 				return (-1);
 			index.i++;
 		}
-		if (index.i > 5)
-			return (-1);
 		index.i = 0;
 	}
 	return (0);
@@ -48,7 +46,7 @@ int	ptrstrlen(char **dest)
 	j = 0;
 	while (dest[j])
 		j++;
-	if (j == 1 && dest[0][0] == '\n')
+	if (j == 1 && dest[0][0] == '\0')
 		return (0);
 	return (j);
 }

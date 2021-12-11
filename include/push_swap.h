@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 17:11:20 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/11 17:41:32 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_inputisnum(char **dest);
 int	ptrstrlen(char **dest);
 void	ft_freetab(char ***dest);
 void	ft_free(char **tmp, char ***dest);
-
+int		ft_check_input(int argc, char **argv);
 
 
 #define MALLOC_ERROR	-2
