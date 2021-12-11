@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 19:34:26 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/11 20:33:43 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ int	ft_checkdquote(char **dest)
 
 	param.i = 0;
 	param.j = 0;
-	param.dest = ft_split(dest, " ");
-	while (param.dest[param.i][param.j])
+	while (dest[1][param.i])
 	{
-		
+		if (ft_isdigit(dest[1][param.i]) == 0)
+			return (-1);
+		param.i++;
 	}
+	return (0);
 }
 
 int	ft_inputisnum(char **dest)
@@ -85,4 +87,19 @@ void	ft_free(char **tmp, char ***dest)
 	}
 	if (dest && *dest)
 		ft_freetab(dest);
+}
+
+int	stockdquote(char **dest)
+{
+	t_param	param;
+
+	param.i = 0;
+	param.j = 0;
+	param.tmp = ft_split(dest[1], " ");
+	while (param.tmp[param.j])
+	{
+		dest[param.j] = ft_atoi(param.tmp[param.j]);
+		param.j++;
+	}
+	return (0);
 }
