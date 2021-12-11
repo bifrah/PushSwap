@@ -6,22 +6,23 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 17:41:32 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/11 17:53:46 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP
 # define PUSH_SWAP
 
+# include "../libft/libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
 
-struct s_param{
+typedef struct s_param {
 	int	i;
 	int	j;
-}	t_param;
+}				t_param;
 
 int	ft_inputisnum(char **dest);
 int	ptrstrlen(char **dest);

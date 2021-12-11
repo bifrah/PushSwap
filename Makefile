@@ -12,7 +12,7 @@ INC_NAME = push_swap.h
 OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC_NAME =	main.c \
 			utils.c \
-			checkinput.c
+			check_input.c
 
 INC= -I inc/ -I libft/
 OBJ= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
