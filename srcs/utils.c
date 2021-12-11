@@ -6,11 +6,18 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 20:33:43 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/11 20:54:35 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	ft_issign(int c)
+{
+	if (c == '-' || c == '+')
+		return (1);
+	return (0);
+}
 
 int	ft_checkdquote(char **dest)
 {
@@ -20,7 +27,9 @@ int	ft_checkdquote(char **dest)
 	param.j = 0;
 	while (dest[1][param.i])
 	{
-		if (ft_isdigit(dest[1][param.i]) == 0)
+		if (ft_isdigit(dest[1][param.i]) == 0
+			|| (ft_issign(dest[1][param.i]) == 1
+			&& ft_isdigit(dest[1][param.i + 1]) == 0))
 			return (-1);
 		param.i++;
 	}
