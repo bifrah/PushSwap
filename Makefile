@@ -1,19 +1,20 @@
 NAME = push_swap
-CC = gcc
+CC = clang
 PARAMS = -Wall -Wextra -Werror
 
-SRC_PATH = srcs/
+LIBFT_LIB_PATH = ./libft/libft.a
+
+INC_PATH = include/
 OBJ_PATH = obj/
+SRC_PATH = srcs/
 
 INC_NAME = push_swap.h
-LIBFT_LIB_PATH = ./libft/libft.a
+OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC_NAME =	main.c \
 
-OBJ_NAME= $(SRC_NAME:.c=.o)
-
-INC= -I inc/ -I libft/
-SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
+INC= $(addprefix $(INC_PATH), $(INC_NAME))
 OBJ= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 DEF= \033[0m
 RED= \033[31;1m
@@ -33,7 +34,7 @@ $(NAME): $(OBJ)
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "$(RED)[push_swap] :$(DEF) Compiling $@"
-	@$(CC) $(PARAMS) $(INC) -o $@ -c $<
+	@$(CC) $(PARAMS) $(INC) -c $< -o $@
 
 clean:
 	@make -C libft clean
