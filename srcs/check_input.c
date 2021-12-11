@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 17:11:20 by bifrah           ###   ########.fr       */
+/*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
+/*   Updated: 2021/12/11 17:31:29 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#include "../include/push_swap.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <limits.h>
+int		ft_check_input(int argc, char **argv)
+{
+	int	fd;
 
-struct s_param{
-	int	i;
-	int	j;
-}	t_param;
-
-int	ft_inputisnum(char **dest);
-int	ptrstrlen(char **dest);
-void	ft_freetab(char ***dest);
-void	ft_free(char **tmp, char ***dest);
-
-
-
-#define MALLOC_ERROR	-2
-#define ERROR			-3
-#define INPUT_ERROR		-4
-#define BLABLA_ERROR	-5
-
-#endif
+	if (argc < 2)
+		return (INPUT_ERROR);
+	if (ft_inputisnum(argv) == -1)
+	{
+		ft_putstr_fd("error", 1);
+		return (INPUT_ERROR);
+	}
+	return (0);
+}

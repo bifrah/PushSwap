@@ -11,8 +11,10 @@ SRC_PATH = srcs/
 INC_NAME = push_swap.h
 OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC_NAME =	main.c \
+			utils.c \
+			checkinput.c
 
-INC= $(addprefix $(INC_PATH), $(INC_NAME))
+INC= -I inc/ -I libft/
 OBJ= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 SRC= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
@@ -34,7 +36,7 @@ $(NAME): $(OBJ)
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	@echo "$(RED)[push_swap] :$(DEF) Compiling $@"
-	@$(CC) $(PARAMS) $(INC) -c $< -o $@
+	@$(CC) $(PARAMS) $(INC) -o $@ -c $<
 
 clean:
 	@make -C libft clean
