@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 18:00:17 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 18:13:45 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,20 @@ void	ft_free(char **tmp, char ***dest)
 		ft_freetab(dest);
 }
 
-int	stockdquote(char **dest)
+int	*stockdquote(char **dest)
 {
 	t_param	param;
+	int		*numbers;
 
 	param.i = 0;
 	param.j = 0;
-	param.tmp = ft_split(dest[1], " ");
+	param.tmp = ft_split(dest[1], ' ');
+	numbers = (int *)malloc(sizeof(int) * (ptrstrlen(&dest[1]) + 1));
 	while (param.tmp[param.j])
 	{
-		dest[param.j] = ft_atoi(param.tmp[param.j]);
+		numbers[param.j] = ft_atoi(param.tmp[param.j]);
 		param.j++;
 	}
+	numbers[param.j] = '\0';
 	return (0);
 }
