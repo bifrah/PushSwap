@@ -6,43 +6,39 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 23:34:01 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/14 00:01:01 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-#define $BR exit (0);
-
-int	ft_argisvalid(char **argv)
+int	ft_argisvalid(char *argv)
 {
 	t_param	param;
 
-	param.j = 0;
 	param.i = 0;
 	if (argv == NULL)
 		return (0);
-	while (argv[++param.j])
+	while (argv[param.i])
 	{	
-		if ((argv[param.j][0] == '-' || argv[param.j][0] == '+')
+		if ((argv[0] == '-' || argv[0] == '+')
 			&& param.i == 0)
 		{
 			param.i = 1;
-			if (ft_isdigit(argv[param.j][param.i]) == 0)
+			if (ft_isdigit(argv[param.i]) == 0)
 				return (-1);
 		}
-		while (argv[param.j][param.i])
+		while (argv[param.i])
 		{
-			if (ft_isdigit(argv[param.j][param.i]) == 0)
+			if (ft_isdigit(argv[param.i]) == 0)
 				return (-1);
 			param.i++;
 		}
-		param.i = 0;
 	}
 	return (0);
 }
 
-int	*check_format(int *ret, int size)
+int	*check_format(int *ret/*, int size*/)
 {
 	//if checkdouble && check...
 	//	return (-1);
@@ -60,10 +56,18 @@ int	*argv_to_tab(char **argv, int size)
 		return (0);
 	while (argv[i])
 	{
-		ret[i] = ft_atoi(argv[i]);
-		i++;
+		if (ft_argisvalid(argv[i]) == 0)
+		{
+			ret[i] = ft_atoi(argv[i]);
+			i++;
+		}
+		else
+		{
+			free(ret);
+			return (0);
+		}
 	}
-	return (check_format(ret, size));
+	return (check_format(ret/*, size*/));
 }
 
 void	print_tab(int *tab, int size)
@@ -78,7 +82,7 @@ void	print_tab(int *tab, int size)
 	}
 }
 
-int	ft_check_input(int argc, char **argv)
+int	ft_stockandcheck(int argc, char **argv)
 {
 	t_param	param;
 

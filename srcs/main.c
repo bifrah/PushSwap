@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 21:47:39 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 23:44:28 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	main(int argc, char **argv)
 {
-	ft_check_input(argc, argv);
+	ft_stockandcheck(argc, argv);
 }
