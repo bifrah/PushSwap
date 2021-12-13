@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 23:32:22 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 23:33:55 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ptrstrlen(char **dest);
 void	ft_freetab(char ***dest);
 void	ft_free(char **tmp, char ***dest);
 int		ft_check_input(int argc, char **argv);
-int		ft_argisvalid(char **argv, int **numbers);
+int		ft_argisvalid(char **argv);
 
 #define ERROR			-2
 #define EMPTY_ARG		-3

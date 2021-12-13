@@ -6,13 +6,14 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 23:32:10 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 23:34:01 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
 #define $BR exit (0);
+
 int	ft_argisvalid(char **argv)
 {
 	t_param	param;
