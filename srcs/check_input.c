@@ -6,11 +6,56 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 19:33:33 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 18:00:06 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	ft_checkdquote(char **dest)
+{
+	t_param	param;
+
+	param.i = 0;
+	param.j = 0;
+	while (dest[1][param.i])
+	{
+		if (ft_isdigit(dest[1][param.i]) == 0
+			|| (ft_issign(dest[1][param.i]) == 1
+			&& ft_isdigit(dest[1][param.i + 1]) == 0))
+			return (-1);
+		param.i++;
+	}
+	return (0);
+}
+
+int	ft_inputisnum(char **dest)
+{
+	t_param	index;
+
+	index.j = 0;
+	index.i = 0;
+	if (dest == NULL)
+		return (0);
+	while (dest[++index.j])
+	{	
+		if ((dest[index.j][0] == '-' || dest[index.j][0] == '+')
+			&& index.i == 0)
+		{
+			index.i = 1;
+			if (ft_isdigit(dest[index.j][index.i]) == 0)
+				return (-1);
+		}
+		while (dest[index.j][index.i])
+		{
+			if (ft_isdigit(dest[index.j][index.i]) == 0)
+				return (-1);
+			index.i++;
+		}
+		index.i = 0;
+	}
+	return (0);
+}
 
 int	ft_check_input(int argc, char **argv)
 {

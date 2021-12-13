@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 20:21:21 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 17:59:36 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ typedef struct s_param {
 	char	**dest;
 }				t_param;
 
-int		ft_inputisnum(char **dest);
 int		ptrstrlen(char **dest);
 void	ft_freetab(char ***dest);
 void	ft_free(char **tmp, char ***dest);
 int		ft_check_input(int argc, char **argv);
+int		ft_inputisnum(char **dest);
 int		ft_checkdquote(char **dest);
 
 
