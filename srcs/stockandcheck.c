@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/14 00:01:01 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/14 00:02:56 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	*argv_to_tab(char **argv, int size)
 	int		i;
 
 	i = 0;
-	ret = malloc(sizeof(int) * size);
+	ret = (int *)malloc(sizeof(int) * size);
 	if (!ret)
 		return (0);
 	while (argv[i])
