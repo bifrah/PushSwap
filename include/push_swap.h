@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 20:31:35 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/13 23:32:22 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@
 # include <limits.h>
 
 typedef struct s_param {
-	int	i;
-	int	j;
 	char	**tmp;
 	char	**dest;
+	int		*numbers;
+	int		i;
+	int		j;
 }				t_param;
 
 int		ft_issign(int c);
@@ -31,7 +32,7 @@ int		ptrstrlen(char **dest);
 void	ft_freetab(char ***dest);
 void	ft_free(char **tmp, char ***dest);
 int		ft_check_input(int argc, char **argv);
-int		ft_inputisnum(char **dest);
+int		ft_argisvalid(char **argv, int **numbers);
 
 #define ERROR			-2
 #define EMPTY_ARG		-3

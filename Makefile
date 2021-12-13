@@ -1,6 +1,6 @@
 NAME = push_swap
 CC = clang
-PARAMS = -Wall -Wextra -Werror
+PARAMS = -Wall -Wextra -Werror -g -fsanitize=address
 
 LIBFT_LIB_PATH = ./libft/libft.a
 
@@ -12,7 +12,7 @@ INC_NAME = push_swap.h
 OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC_NAME =	main.c \
 			utils.c \
-			check_input.c
+			stockandcheck.c
 
 INC= -I inc/ -I libft/
 OBJ= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
