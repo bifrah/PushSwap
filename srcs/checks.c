@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 18:37:32 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 18:38:19 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ int	ft_checkdouble(int *tab, int size)
 		while (i >= 0 && j >= 0)
 		{
 			if (tab[j] == tab[i])
-			{
 				return (-1);
-			}
 			j--;
 		}
 		i--;
