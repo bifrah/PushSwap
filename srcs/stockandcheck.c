@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 16:44:55 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 17:31:36 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ int	ft_argisvalid(char *argv)
 	return (0);
 }
 
-// int	*check_format(int *tab, int size)
-// {
-// 	if (ft_checkdouble(tab, size) =! 0 && check...)
-// 		return (-1);
-// 	return (tab);
-// }
+int	*check_format(int *tab, int size)
+{
+	if (ft_checkdouble(tab, size) < 0)
+		ft_putstr_fd("error\n", 1);
+	return (tab);
+}
 
 int	*argv_to_tab(char **argv, int size)
 {
@@ -94,7 +94,6 @@ int	ft_stockandcheck(int argc, char **argv)
 		ft_putstr_fd("error\n", 1);
 		return (INPUT_ERROR);
 	}
-	print_tab(param.numbers, argc - 1);
 	free(param.numbers);
 	return (0);
 }
