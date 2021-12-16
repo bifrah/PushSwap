@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 17:32:18 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 17:48:12 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int		*argv_to_tab(char **argv, int size);
 int		*check_format(int *tab, int size);
 int		ft_checkdouble(int *tab, int size);
 void	print_tab(int *tab, int size);
-
 
 //#define $BR exit (0);
 #define ERROR			-2

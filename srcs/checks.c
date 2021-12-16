@@ -6,9 +6,11 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 17:31:55 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 17:50:54 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/push_swap.h"
 
 int	ft_checkdouble(int *tab, int size)
 {
@@ -17,9 +19,9 @@ int	ft_checkdouble(int *tab, int size)
 
 	i = size;
 	j = size - 1;
+	print_tab(tab, size);
 	while (i >= 0)
 	{
-		print_tab(tab, size);
 		while (i >= 0 && j >= 0)
 		{
 			if (tab[i] == tab[j])
