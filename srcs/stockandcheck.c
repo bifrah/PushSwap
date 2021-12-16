@@ -6,11 +6,23 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/14 00:02:56 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 16:25:07 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	print_tab(int *tab, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
+}
 
 int	ft_argisvalid(char *argv)
 {
@@ -70,18 +82,6 @@ int	*argv_to_tab(char **argv, int size)
 	return (check_format(ret/*, size*/));
 }
 
-void	print_tab(int *tab, int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
-	{
-		printf("%d\n", tab[i]);
-		i++;
-	}
-}
-
 int	ft_stockandcheck(int argc, char **argv)
 {
 	t_param	param;
@@ -95,5 +95,6 @@ int	ft_stockandcheck(int argc, char **argv)
 		return (INPUT_ERROR);
 	}
 	print_tab(param.numbers, argc - 1);
+	free(param.numbers);
 	return (0);
 }
