@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 21:51:27 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 15:57:38 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,24 +31,24 @@ int	ptrstrlen(char **dest)
 	return (j);
 }
 
-void	ft_freetab(char ***dest)
+void	ft_freetab(int **tab)
 {
 	int	y;
 
 	y = -1;
-	while (dest[0][++y])
-		free(dest[0][y]);
-	free(*dest);
-	*dest = NULL;
+	while (tab[++y])
+		free(tab[y]);
+	free(*tab);
+	*tab = NULL;
 }
 
-void	ft_free(char **tmp, char ***dest)
-{
-	if (*tmp)
-	{
-		free(*tmp);
-		*tmp = NULL;
-	}
-	if (dest && *dest)
-		ft_freetab(dest);
-}
+// void	ft_free(char **tmp, char ***dest)
+// {
+// 	if (*tmp)
+// 	{
+// 		free(*tmp);
+// 		*tmp = NULL;
+// 	}
+// 	if (dest && *dest)
+// 		ft_freetab(dest);
+// }

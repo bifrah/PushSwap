@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/13 23:52:26 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 15:57:59 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_param {
 
 int		ft_issign(int c);
 int		ptrstrlen(char **dest);
-void	ft_freetab(char ***dest);
+void	ft_freetab(int **tab);
 void	ft_free(char **tmp, char ***dest);
 int		ft_stockandcheck(int argc, char **argv);
 int		ft_argisvalid(char *argv);
