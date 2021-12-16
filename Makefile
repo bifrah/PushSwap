@@ -1,6 +1,6 @@
 NAME = push_swap
 CC = clang
-PARAMS = -Wall -Wextra -Werror -g -fsanitize=address
+PARAMS = -Wall -Wextra -Werror
 
 LIBFT_LIB_PATH = ./libft/libft.a
 
