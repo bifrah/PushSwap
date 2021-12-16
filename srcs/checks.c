@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 18:38:19 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 19:03:56 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,26 @@ int	ft_checkdouble(int *tab, int size)
 		}
 		i--;
 		j = i - 1;
+	}
+	return (0);
+}
+
+int	ft_maxandmin(int *tab, int size)
+{
+	long int	min;
+	long int	max;
+	int			i;
+
+	min = -2147483648;
+	max = 2147483647;
+	i = size - 1;
+	while (i >= 0)
+	{
+		if (tab[i] < min)
+			return (-1);
+		if (tab[i] > max)
+			return (-1);
+		i--;
 	}
 	return (0);
 }

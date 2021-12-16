@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 17:48:12 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 19:03:12 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_param {
 	int		j;
 }				t_param;
 
+void	print_tab(int *tab, int size);
 int		ft_issign(int c);
 int		ptrstrlen(char **dest);
 void	ft_freetab(int **tab);
@@ -37,7 +38,7 @@ void	print_tab(int *tab, int size);
 int		*argv_to_tab(char **argv, int size);
 int		*check_format(int *tab, int size);
 int		ft_checkdouble(int *tab, int size);
-void	print_tab(int *tab, int size);
+int		ft_maxandmin(int *tab, int size);
 
 //#define $BR exit (0);
 #define ERROR			-2

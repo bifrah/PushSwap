@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 17:53:42 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 19:02:45 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_argisvalid(char *argv)
 
 int	*check_format(int *tab, int size)
 {
-	if (ft_checkdouble(tab, size) < 0)
+	if (ft_checkdouble(tab, size) < 0 || ft_maxandmin(tab, size) < 0)
 		ft_putstr_fd("error\n", 1);
 	return (tab);
 }
