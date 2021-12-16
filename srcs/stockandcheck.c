@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 16:25:07 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/16 16:44:55 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,36 +50,36 @@ int	ft_argisvalid(char *argv)
 	return (0);
 }
 
-int	*check_format(int *ret/*, int size*/)
-{
-	//if checkdouble && check...
-	//	return (-1);
-	return (ret);
-}
+// int	*check_format(int *tab, int size)
+// {
+// 	if (ft_checkdouble(tab, size) =! 0 && check...)
+// 		return (-1);
+// 	return (tab);
+// }
 
 int	*argv_to_tab(char **argv, int size)
 {
-	int		*ret;
+	int		*tab;
 	int		i;
 
 	i = 0;
-	ret = (int *)malloc(sizeof(int) * size);
-	if (!ret)
+	tab = (int *)malloc(sizeof(int) * size);
+	if (!tab)
 		return (0);
 	while (argv[i])
 	{
 		if (ft_argisvalid(argv[i]) == 0)
 		{
-			ret[i] = ft_atoi(argv[i]);
+			tab[i] = ft_atoi(argv[i]);
 			i++;
 		}
 		else
 		{
-			free(ret);
+			free(tab);
 			return (0);
 		}
 	}
-	return (check_format(ret/*, size*/));
+	return (check_format(tab, size));
 }
 
 int	ft_stockandcheck(int argc, char **argv)
