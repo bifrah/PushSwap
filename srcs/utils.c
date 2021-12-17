@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/17 16:23:29 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 17:36:56 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,3 @@ void	ft_freetab(long int **tab)
 	free(*tab);
 	*tab = NULL;
 }
-
-// void	ft_free(char **tmp, char ***dest)
-// {
-// 	if (*tmp)
-// 	{
-// 		free(*tmp);
-// 		*tmp = NULL;
-// 	}
-// 	if (dest && *dest)
-// 		ft_freetab(dest);
-// }
