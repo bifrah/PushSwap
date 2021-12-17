@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/17 16:22:40 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:26:08 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	print_tab(long int *tab, int size)
 	i = 0;
 	while (i < size)
 	{
-		printf("%d\n", tab[i]);
+		printf("%ld\n", tab[i]);
 		i++;
 	}
 }
@@ -49,20 +49,20 @@ int	ft_argisvalid(char *argv)
 	return (0);
 }
 
-int	*check_format(long int *tab, int size)
+long int	*check_format(long int *tab, int size)
 {
 	if (ft_checkdouble(tab, size) < 0 || printf("max error : %d\n", ft_maxandmin(tab, size) < 0))
 		ft_putstr_fd("error\n", 1);
 	return (tab);
 }
 
-int	*argv_to_tab(char **argv, int size)
+long int	*argv_to_tab(char **argv, int size)
 {
 	long int	*tab;
 	int			i;
 
 	i = 0;
-	tab = (int *)malloc(sizeof(int) * size);
+	tab = (long int *)malloc(sizeof(long int) * size);
 	if (!tab)
 		return (0);
 	while (argv[i])
