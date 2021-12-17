@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 15:57:38 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:23:29 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ptrstrlen(char **dest)
 	return (j);
 }
 
-void	ft_freetab(int **tab)
+void	ft_freetab(long int **tab)
 {
 	int	y;
 
