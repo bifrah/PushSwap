@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/17 16:26:30 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 17:12:35 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int	ft_maxandmin(long int *tab, int size)
 	i = size - 1;
 	while (i >= 0)
 	{
-		printf("tab[i] = %ld\n", tab[i]);
 		if (tab[i] < min || tab[i] > max)
 			return (-1);
 		i--;
