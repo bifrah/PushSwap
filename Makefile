@@ -1,5 +1,5 @@
 NAME = push_swap
-CC = clang
+CC = gcc
 PARAMS = -Wall -Wextra -Werror
 
 LIBFT_LIB_PATH = ./libft/libft.a

@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 16:19:00 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:13:18 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,6 @@ int	main(int argc, char **argv)
 	int	errornum;
 
 	errornum = ft_stockandcheck(argc, argv);
+	if (errornum < 0)
+		return (ERROR);
 }
