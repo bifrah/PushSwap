@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/17 16:13:18 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 17:38:28 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 int	main(int argc, char **argv)
 {
-	int	errornum;
+	t_param	param;
 
-	errornum = ft_stockandcheck(argc, argv);
-	if (errornum < 0)
-		return (ERROR);
+	ft_stockandcheck(argc, argv, param);
+	// ft_sortall(param.numbers, argc - 1);
 }
