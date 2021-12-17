@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 14:27:41 by bifrah            #+#    #+#             */
-/*   Updated: 2021/06/17 17:33:15 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:37:30 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int n);
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 char			*ft_strnstr(const char *large, const char *small,
 					unsigned int n);
-int				ft_atoi(const char *str);
+long int		ft_atoi(const char *str);
 void			*ft_calloc(unsigned int count, unsigned int size);
 char			*ft_strdup(const char *src);
 char			*ft_substr(char const *s, unsigned int start, unsigned int len);

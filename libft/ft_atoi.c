@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 17:30:09 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/11 20:24:55 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:37:01 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ static int	ft_space(char c)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
-	int	i;
-	int	result;
-	int	score;
+	int			i;
+	long int	result;
+	int			score;
 
 	i = 0;
 	result = 0;
