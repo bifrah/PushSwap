@@ -6,13 +6,13 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 19:02:45 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:22:40 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	print_tab(int *tab, int size)
+void	print_tab(long int *tab, int size)
 {
 	int	i;
 
@@ -49,17 +49,17 @@ int	ft_argisvalid(char *argv)
 	return (0);
 }
 
-int	*check_format(int *tab, int size)
+int	*check_format(long int *tab, int size)
 {
-	if (ft_checkdouble(tab, size) < 0 || ft_maxandmin(tab, size) < 0)
+	if (ft_checkdouble(tab, size) < 0 || printf("max error : %d\n", ft_maxandmin(tab, size) < 0))
 		ft_putstr_fd("error\n", 1);
 	return (tab);
 }
 
 int	*argv_to_tab(char **argv, int size)
 {
-	int		*tab;
-	int		i;
+	long int	*tab;
+	int			i;
 
 	i = 0;
 	tab = (int *)malloc(sizeof(int) * size);

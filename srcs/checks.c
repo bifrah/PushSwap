@@ -6,13 +6,13 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/16 19:03:56 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 16:22:52 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_checkdouble(int *tab, int size)
+int	ft_checkdouble(long int *tab, int size)
 {
 	int	i;
 	int	j;
@@ -33,7 +33,7 @@ int	ft_checkdouble(int *tab, int size)
 	return (0);
 }
 
-int	ft_maxandmin(int *tab, int size)
+int	ft_maxandmin(long int *tab, int size)
 {
 	long int	min;
 	long int	max;
@@ -44,9 +44,8 @@ int	ft_maxandmin(int *tab, int size)
 	i = size - 1;
 	while (i >= 0)
 	{
-		if (tab[i] < min)
-			return (-1);
-		if (tab[i] > max)
+		printf("tab[i] = %d\n", tab[i]);
+		if (tab[i] < min || tab[i] > max)
 			return (-1);
 		i--;
 	}
