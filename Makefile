@@ -13,7 +13,8 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC_NAME =	main.c \
 			utils.c \
 			stockandcheck.c \
-			checks.c
+			checks.c \
+			sortall.c
 
 INC= -I inc/ -I libft/
 OBJ= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
