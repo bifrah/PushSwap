@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/17 17:45:18 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/17 18:01:30 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,20 +79,4 @@ long int	*argv_to_tab(char **argv, int size)
 		}
 	}
 	return (check_format(tab, size));
-}
-
-int	ft_stockandcheck(int argc, char **argv, t_param param)
-{
-	if (!(argc >= 3))
-		return (EMPTY_ARG);
-	param.numbers = argv_to_tab(argv + 1, argc - 1);
-	if (!param.numbers)
-	{
-		ft_putstr_fd("error\n", 1);
-		return (INPUT_ERROR);
-	}
-	//ft_tri(param.numbers, argc);
-	print_tab(param.numbers, argc - 1);
-	free(param.numbers);
-	return (0);
 }
