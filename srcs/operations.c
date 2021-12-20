@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/20 21:18:41 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:29:13 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,42 +53,62 @@ void	ss(long int **tab_a, long int **tab_b, int argc)
 
 void	pa(long int **tab_a, long int **tab_b, int argc)
 {
-	
+	int	i;
+	int	j;
+
+	i = 0;
+	j = argc - 1;
+	if (tab_b[0][i])
+	{
+		while (j >= 0)
+		{
+			tab_a[0][j - 1] = tab_a[0][j];
+			j--;
+		}
+		tab_a[0][j] = tab_b[0][i];
+	}
+	ft_putstr_fd("pa\n", 1);
 }
 
 void	pb(long int **tab_a, long int **tab_b, int argc)
 {
-	
+	ft_putstr_fd("pb\n", 1);
 }
 
 void	ra(long int **tab_a, int argc, int message)
 {
-	
+	if (message != 0)
+		ft_putstr_fd("ra\n", 1);
 }
 
 void	rb(long int **tab_b, int argc, int message)
 {
-	
+	if (message != 0)
+		ft_putstr_fd("rb\n", 1);
 }
 
 void	rr(long int **tab_a, long int **tab_b, int argc)
 {
-	ra();
-	rb();
+	ra(tab_a, argc, 0);
+	rb(tab_b, argc, 0);
+	ft_putstr_fd("rr\n", 1);
 }
 
 void	rra(long int **tab_a, long int **tab_b, int argc, int message)
 {
-	
+	if (message != 0)
+		ft_putstr_fd("rra\n", 1);
 }
 
 void	rrb(long int **tab_a, long int **tab_b, int argc, int message)
 {
-	
+	if (message != 0)
+		ft_putstr_fd("rrb\n", 1);
 }
 
 void	rrr(long int **tab_a, long int **tab_b, int argc)
 {
-	rra();
-	rrb();
+	rra(tab_a, tab_b, argc, 0);
+	rrb(tab_a, tab_b, argc, 0);
+	ft_putstr_fd("rrr\n", 1);
 }
