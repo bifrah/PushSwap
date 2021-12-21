@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/17 18:08:30 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/21 02:47:32 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,17 @@ long int	*check_format(long int *tab, int size);
 int			ft_checkdouble(long int *tab, int size);
 int			ft_maxandmin(long int *tab, int size);
 void		ft_sortall(long int **tab, int argc);
+void		sa(long int **tab_a, int argc, int message);
+void		sb(long int **tab_b, int argc, int message);
+void		ss(long int **tab_a, long int **tab_b, int argc);
+void		pa(long int **tab_a, long int **tab_b, int argc);
+void		pb(long int **tab_a, long int **tab_b, int argc);
+void		ra(long int **tab_a, int argc, int message);
+void		rb(long int **tab_b, int argc, int message);
+void		rr(long int **tab_a, long int **tab_b, int argc);
+void		rra(long int **tab_a, long int **tab_b, int argc, int message);
+void		rrb(long int **tab_a, long int **tab_b, int argc, int message);
+void		rrr(long int **tab_a, long int **tab_b, int argc);
 
 //#define $BR exit (0);
 #define ERROR			-2

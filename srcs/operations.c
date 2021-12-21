@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/20 21:29:13 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/20 21:30:24 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	pa(long int **tab_a, long int **tab_b, int argc)
 	{
 		while (j >= 0)
 		{
-			tab_a[0][j - 1] = tab_a[0][j];
+			tab_a[0][j] = tab_a[0][j - 1];
 			j--;
 		}
 		tab_a[0][j] = tab_b[0][i];
