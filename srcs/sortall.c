@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/20 20:49:34 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 21:57:47 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ void	ft_select(long int **tab, int argc)
 
 void	ft_bubble(long int **tab, int argc)
 {
-	int i;
-	int j;
-	int tmp;
+	int	i;
+	int	j;
+	int	tmp;
 
 	j = 1;
 	while (j <= argc)
 	{
-		i=0;
+		i = 0;
 		while (i < argc - 1)
 		{
 			if (tab[0][i] > tab[0][i + 1])
@@ -103,4 +103,3 @@ void	ft_sortall(long int **tab, int argc)
 	if (argc < 50)
 		ft_select(tab, argc);
 }
-
