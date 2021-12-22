@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 14:18:16 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 14:21:31 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,15 @@ int	main(int argc, char **argv)
 	param.numbers_b = (long int *)malloc(sizeof(long int) * (argc - 1));
 	if (!param.numbers_b)
 		return (MALLOC_ERROR);
+	param.numbers_b[0] = 42;
+	param.numbers_b[1] = 222;
 	write(1, "\nA\n", 3);
 	print_tab(param.numbers_a, argc - 1);
 	write(1, "\nB\n", 3);
 	print_tab(param.numbers_b, argc - 1);
 	write(1, "\n", 1);
 	// ft_sortall(&param.numbers_a, argc - 1);
-	pb(&param.numbers_a, &param.numbers_b, argc);
-	pb(&param.numbers_a, &param.numbers_b, argc);
+	ss(&param.numbers_a, &param.numbers_b, argc);
 	write(1, "\nA\n", 3);
 	print_tab(param.numbers_a, argc - 1);
 	write(1, "\nB\n", 3);
