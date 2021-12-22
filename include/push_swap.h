@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/21 02:47:32 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 13:57:03 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,15 @@
 typedef struct s_param {
 	char		**tmp;
 	char		**dest;
-	long int	*numbers;
+	long int	*numbers_a;
+	long int	*numbers_b;
 	int			i;
 	int			j;
 }				t_param;
 
 void		print_tab(int long *tab, int size);
 int			ft_issign(int c);
-int			ptrstrlen(char **dest);
-void		ft_freetab(long int **tab);
-void		ft_free(char **tmp, char ***dest);
-int			ft_stockandcheck(int argc, char **argv, t_param param);
+int		create_tabs(t_param param, int argc, char **argv);
 int			ft_argisvalid(char *argv);
 long int	*argv_to_tab(char **argv, int size);
 long int	*check_format(long int *tab, int size);
