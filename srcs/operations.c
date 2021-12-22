@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 14:15:56 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 14:25:56 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	ra(long int **tab_a, int argc, int message)
 
 	i = 0;
 	tmp = tab_a[0][i];
-	while (i + 1 <= argc - 1)
+	while (i + 1 < argc - 1)
 	{
 		tab_a[0][i] = tab_a[0][i + 1];
 		i++;
@@ -121,7 +121,7 @@ void	rb(long int **tab_b, int argc, int message)
 
 	i = 0;
 	tmp = tab_b[0][i];
-	while (i + 1 <= argc - 1)
+	while (i + 1 < argc - 1)
 	{
 		tab_b[0][i] = tab_b[0][i + 1];
 		i++;

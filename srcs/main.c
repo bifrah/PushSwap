@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 14:21:31 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 14:25:03 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	print_tab(param.numbers_b, argc - 1);
 	write(1, "\n", 1);
 	// ft_sortall(&param.numbers_a, argc - 1);
-	ss(&param.numbers_a, &param.numbers_b, argc);
+	ra(&param.numbers_a, argc, 1);
 	write(1, "\nA\n", 3);
 	print_tab(param.numbers_a, argc - 1);
 	write(1, "\nB\n", 3);
