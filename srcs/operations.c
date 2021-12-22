@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 22:19:43 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 23:16:38 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,18 +110,21 @@ void	rtab(long int **tab_a, t_param *param, int message)
 	int			i;
 	long int	tmp;
 
-	i = 0;
-	tmp = tab_a[0][i];
-	while (i + 1 < (param->argc - 1))
+	if (param->size_a > 0 || param->size_b > 0)
 	{
-		tab_a[0][i] = tab_a[0][i + 1];
-		i++;
-	}
-	tab_a[0][i] = tmp;
-	if (message == 1)
-		ft_putstr_fd("ra\n", 1);
-	if (message == 2)
-		ft_putstr_fd("rb\n", 1);
+		i = 0;
+		tmp = tab_a[0][i];
+		while (i + 1 < (param->argc - 1))
+		{
+			tab_a[0][i] = tab_a[0][i + 1];
+			i++;
+		}
+		tab_a[0][i] = tmp;
+		if (message == 1)
+			ft_putstr_fd("ra\n", 1);
+		if (message == 2)
+			ft_putstr_fd("rb\n", 1);
+}
 }
 
 void	rr(long int **tab_a, long int **tab_b, t_param *param)
@@ -131,7 +134,7 @@ void	rr(long int **tab_a, long int **tab_b, t_param *param)
 	ft_putstr_fd("rr\n", 1);
 }
 
-void	rrtab(long int **tab_a, long int **tab_b, t_param *param, int message)
+void	rrtab(long int **tab_a, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
@@ -152,7 +155,7 @@ void	rrtab(long int **tab_a, long int **tab_b, t_param *param, int message)
 
 void	rrr(long int **tab_a, long int **tab_b, t_param *param)
 {
-	rrtab(tab_a, tab_b, param, 0);
-	rrtab(tab_b, tab_a, param, 0);
+	rrtab(tab_a, param, 0);
+	rrtab(tab_b, param, 0);
 	ft_putstr_fd("rrr\n", 1);
 }
