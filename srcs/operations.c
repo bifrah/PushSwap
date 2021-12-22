@@ -6,19 +6,19 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 14:25:56 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 20:16:24 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	sa(long int **tab_a, int argc, int message)
+void	sa(long int **tab_a, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
 
 	i = 0;
-	if (argc > 2)
+	if (param->argc > 2)
 	{
 		tmp = tab_a[0][i];
 		tab_a[0][i] = tab_a[0][i + 1];
@@ -28,13 +28,13 @@ void	sa(long int **tab_a, int argc, int message)
 		ft_putstr_fd("sa\n", 1);
 }
 
-void	sb(long int **tab_b, int argc, int message)
+void	sb(long int **tab_b, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
 
 	i = 0;
-	if (argc > 2)
+	if (param->argc > 2)
 	{
 		tmp = tab_b[0][i];
 		tab_b[0][i] = tab_b[0][i + 1];
@@ -44,67 +44,75 @@ void	sb(long int **tab_b, int argc, int message)
 		ft_putstr_fd("sb\n", 1);
 }
 
-void	ss(long int **tab_a, long int **tab_b, int argc)
+void	ss(long int **tab_a, long int **tab_b, t_param *param)
 {
-	sa(tab_a, argc, 0);
-	sb(tab_b, argc, 0);
+	sa(tab_a, param, 0);
+	sb(tab_b, param, 0);
 	ft_putstr_fd("ss\n", 1);
 }
 
-void	pa(long int **tab_a, long int **tab_b, int argc)
+void	pa(long int **tab_a, long int **tab_b, t_param *param)
 {
 	int	i;
 	int	tmp;
 
-	i = 0;
-	tmp = tab_b[0][0];
-	while (i < argc - 1)
+	if (param->size_b > 0)
 	{
-		tab_b[0][i] = tab_b[0][i + 1];
-		i++;
+		i = 0;
+		tmp = tab_b[0][0];
+		while (i < param->argc - 1)
+		{
+			tab_b[0][i] = tab_b[0][i + 1];
+			i++;
+		}
+		tab_b[0][i] = 0;
+		i = param->argc - 1;
+		while (i > 0)
+		{
+			tab_a[0][i] = tab_a[0][i - 1];
+			i--;
+		}
+		tab_a[0][i] = tmp;
+		param->size_b--;
+		ft_putstr_fd("pa\n", 1);
 	}
-	tab_b[0][i] = 0;
-	i = argc - 1;
-	while (i > 0)
-	{
-		tab_a[0][i] = tab_a[0][i - 1];
-		i--;
-	}
-	tab_a[0][i] = tmp;
-	ft_putstr_fd("pa\n", 1);
 }
 
-void	pb(long int **tab_a, long int **tab_b, int argc)
+void	pb(long int **tab_a, long int **tab_b, t_param *param)
 {
 	int	i;
 	int	tmp;
 
-	i = 0;
-	tmp = tab_a[0][0];
-	while (i < argc - 1)
+	if (param->size_a > 0)
 	{
-		tab_a[0][i] = tab_a[0][i + 1];
-		i++;
+		i = 0;
+		tmp = tab_a[0][0];
+		while (i < param->argc - 1)
+		{
+			tab_a[0][i] = tab_a[0][i + 1];
+			i++;
+		}
+		tab_a[0][i] = 0;
+		i = param->argc - 1;
+		while (i > 0)
+		{
+			tab_b[0][i] = tab_b[0][i - 1];
+			i--;
+		}
+		tab_b[0][i] = tmp;
+		param->size_a--;
+		ft_putstr_fd("pb\n", 1);
 	}
-	tab_a[0][i] = 0;
-	i = argc - 1;
-	while (i > 0)
-	{
-		tab_b[0][i] = tab_b[0][i - 1];
-		i--;
-	}
-	tab_b[0][i] = tmp;
-	ft_putstr_fd("pb\n", 1);
 }
 
-void	ra(long int **tab_a, int argc, int message)
+void	ra(long int **tab_a, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
 
 	i = 0;
 	tmp = tab_a[0][i];
-	while (i + 1 < argc - 1)
+	while (i + 1 < param->argc - 1)
 	{
 		tab_a[0][i] = tab_a[0][i + 1];
 		i++;
@@ -114,14 +122,14 @@ void	ra(long int **tab_a, int argc, int message)
 		ft_putstr_fd("ra\n", 1);
 }
 
-void	rb(long int **tab_b, int argc, int message)
+void	rb(long int **tab_b, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
 
 	i = 0;
 	tmp = tab_b[0][i];
-	while (i + 1 < argc - 1)
+	while (i + 1 < param->argc - 1)
 	{
 		tab_b[0][i] = tab_b[0][i + 1];
 		i++;
@@ -131,19 +139,19 @@ void	rb(long int **tab_b, int argc, int message)
 		ft_putstr_fd("rb\n", 1);
 }
 
-void	rr(long int **tab_a, long int **tab_b, int argc)
+void	rr(long int **tab_a, long int **tab_b, t_param *param)
 {
-	ra(tab_a, argc, 0);
-	rb(tab_b, argc, 0);
+	ra(tab_a, param, 0);
+	rb(tab_b, param, 0);
 	ft_putstr_fd("rr\n", 1);
 }
 
-void	rra(long int **tab_a, long int **tab_b, int argc, int message)
+void	rra(long int **tab_a, long int **tab_b, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
 
-	i = argc - 1;
+	i = param->argc - 1;
 	tmp = tab_b[0][i];
 	while (i - 1 >= 0)
 	{
@@ -155,12 +163,12 @@ void	rra(long int **tab_a, long int **tab_b, int argc, int message)
 		ft_putstr_fd("rra\n", 1);
 }
 
-void	rrb(long int **tab_a, long int **tab_b, int argc, int message)
+void	rrb(long int **tab_a, long int **tab_b, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
 
-	i = argc - 1;
+	i = param->argc - 1;
 	tmp = tab_b[0][i];
 	while (i - 1 >= 0)
 	{
@@ -172,9 +180,9 @@ void	rrb(long int **tab_a, long int **tab_b, int argc, int message)
 		ft_putstr_fd("rrb\n", 1);
 }
 
-void	rrr(long int **tab_a, long int **tab_b, int argc)
+void	rrr(long int **tab_a, long int **tab_b, t_param *param)
 {
-	rra(tab_a, tab_b, argc, 0);
-	rrb(tab_a, tab_b, argc, 0);
+	rra(tab_a, tab_b, param, 0);
+	rrb(tab_a, tab_b, param, 0);
 	ft_putstr_fd("rrr\n", 1);
 }
