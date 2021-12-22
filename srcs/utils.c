@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 20:13:54 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/22 21:59:48 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	create_tabs(t_param *param, int argc, char **argv)
 		return (EMPTY_ARG);
 	param->argc = argc;
 	param->size_a = argc - 1;
-	param->size_b = argc - 1;
+	param->size_b = 2;
 	param->numbers_a = argv_to_tab(argv + 1, param->size_a);
 	if (!param->numbers_a)
 	{
