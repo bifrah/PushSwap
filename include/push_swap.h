@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 12:42:40 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 13:01:28 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void		pa(long int **tab_a, long int **tab_b, t_param *param);
 void		pb(long int **tab_a, long int **tab_b, t_param *param);
 void		rtab(long int **tab_a, t_param *param, int sizetab, int message);
 void		rr(long int **tab_a, long int **tab_b, t_param *param);
-void		rrtab(long int **tab_a, t_param *param, int message);
+void		rrtab(long int **tab_a, t_param *param, int sizetab, int message);
 void		rrr(long int **tab_a, long int **tab_b, t_param *param);
 
 //#define $BR exit (0);
