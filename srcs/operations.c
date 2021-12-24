@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 23:26:04 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 12:35:52 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,12 +109,19 @@ void	rtab(long int **tab, t_param *param, int message)
 {
 	int			i;
 	long int	tmp;
+	int			*size;
 
-	if (param->size_a > 0 || param->size_b > 0)
+	size = 0;
+	if (message == 1)
+		size = &(param->size_a);
+	if (message == 2)
+		size = &(param->size_b);
+	printf("size : %d\n", *size);
+	if (*size > 0)
 	{
 		i = 0;
 		tmp = tab[0][i];
-		while (i + 1 < (param->argc - 1))
+		while (i + 1 < *size)
 		{
 			tab[0][i] = tab[0][i + 1];
 			i++;
