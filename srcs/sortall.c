@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 21:57:47 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 14:54:23 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,12 @@ void	ft_bubble(long int **tab, int argc)
 			if (tab[0][i] > tab[0][i + 1])
 			{
 					tmp = tab[0][i];
-					tab[0][i] = tab[0][i+1];
-					tab[0][i+1] = tmp;
+					tab[0][i] = tab[0][i + 1];
+					tab[0][i + 1] = tmp;
 			}
 			i++;
 		}
 		j++;
-	}
-	int z = 0;
-	while(z < argc)
-	{
-		printf("tab[%d] : %ld\n", z, tab[0][z]);
-		z++;
 	}
 }
 
