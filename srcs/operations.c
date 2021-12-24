@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 12:43:19 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 12:52:06 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void	pa(long int **tab_a, long int **tab_b, t_param *param)
 		}
 		tab_a[0][i] = tmp;
 		param->size_b--;
+		param->size_a++;
 		ft_putstr_fd("pa\n", 1);
 	}
 }
@@ -101,6 +102,7 @@ void	pb(long int **tab_a, long int **tab_b, t_param *param)
 		}
 		tab_b[0][i] = tmp;
 		param->size_a--;
+		param->size_b++;
 		ft_putstr_fd("pb\n", 1);
 	}
 }
