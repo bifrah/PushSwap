@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 14:01:48 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 14:17:22 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,8 +153,6 @@ void	rrtab(long int **tab, t_param *param, int sizetab, int message)
 		size = &(param->size_a);
 	if (sizetab == 2)
 		size = &(param->size_b);
-	printf("size : %d\n", *size);
-	write(1, "asdf\n", 5);
 	if (*size > 0)
 	{
 		i = *size - 1;
