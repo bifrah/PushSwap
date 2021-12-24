@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 13:01:28 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 15:31:23 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,16 @@ long int	*argv_to_tab(char **argv, int size);
 long int	*check_format(long int *tab, int size);
 int			ft_checkdouble(long int *tab, int size);
 int			ft_maxandmin(long int *tab, int size);
-void		ft_sortall(long int **tab, int argc);
-void		sa(long int **tab_a, t_param *param, int message);
-void		sb(long int **tab_b, t_param *param, int message);
-void		ss(long int **tab_a, long int **tab_b, t_param *param);
-void		pa(long int **tab_a, long int **tab_b, t_param *param);
-void		pb(long int **tab_a, long int **tab_b, t_param *param);
-void		rtab(long int **tab_a, t_param *param, int sizetab, int message);
-void		rr(long int **tab_a, long int **tab_b, t_param *param);
-void		rrtab(long int **tab_a, t_param *param, int sizetab, int message);
-void		rrr(long int **tab_a, long int **tab_b, t_param *param);
+void		ft_sortall(t_param *param, long int **tab_a, long int **tab_b);
+void		sa(t_param *param, long int **tab_a, int message);
+void		sb(t_param *param, long int **tab_b, int message);
+void		ss(t_param *param, long int **tab_a, long int **tab_b);
+void		pa(t_param *param, long int **tab_a, long int **tab_b);
+void		pb(t_param *param, long int **tab_a, long int **tab_b);
+void		rtab(t_param *param, long int **tab_a, int sizetab, int message);
+void		rr(t_param *param, long int **tab_a, long int **tab_b);
+void		rrtab(t_param *param, long int **tab_a, int sizetab, int message);
+void		rrr(t_param *param, long int **tab_a, long int **tab_b);
 
 //#define $BR exit (0);
 #define ERROR			-2
