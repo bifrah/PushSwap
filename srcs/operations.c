@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 12:35:52 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 12:43:19 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,18 +105,17 @@ void	pb(long int **tab_a, long int **tab_b, t_param *param)
 	}
 }
 
-void	rtab(long int **tab, t_param *param, int message)
+void	rtab(long int **tab, t_param *param, int sizetab, int message)
 {
 	int			i;
 	long int	tmp;
 	int			*size;
 
 	size = 0;
-	if (message == 1)
+	if (sizetab == 1)
 		size = &(param->size_a);
-	if (message == 2)
+	if (sizetab == 2)
 		size = &(param->size_b);
-	printf("size : %d\n", *size);
 	if (*size > 0)
 	{
 		i = 0;
@@ -136,8 +135,8 @@ void	rtab(long int **tab, t_param *param, int message)
 
 void	rr(long int **tab_a, long int **tab_b, t_param *param)
 {
-	rtab(tab_a, param, 0);
-	rtab(tab_b, param, 0);
+	rtab(tab_a, param, 1, 0);
+	rtab(tab_b, param, 2, 0);
 	ft_putstr_fd("rr\n", 1);
 }
 

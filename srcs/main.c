@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 12:36:12 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/24 12:44:02 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	write(1, "\nB\n", 3);
 	print_tab(param.numbers_b, param.size_b);
 	write(1, "\n", 1);
-	rtab(&param.numbers_a, &param, 1);
+	rr(&param.numbers_a, &param.numbers_b, &param);
 	write(1, "\nA\n", 3);
 	print_tab(param.numbers_a, param.size_a);
 	write(1, "\nB\n", 3);
