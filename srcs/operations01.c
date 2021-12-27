@@ -6,13 +6,13 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 14:52:53 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/27 22:01:35 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	sa(long int **tab_a, t_param *param, int message)
+void	sa(t_param *param, long int **tab_a, int message)
 {
 	int			i;
 	long int	tmp;
@@ -28,7 +28,7 @@ void	sa(long int **tab_a, t_param *param, int message)
 		ft_putstr_fd("sa\n", 1);
 }
 
-void	sb(long int **tab_b, t_param *param, int message)
+void	sb(t_param *param, long int **tab_b, int message)
 {
 	int			i;
 	long int	tmp;
@@ -44,14 +44,14 @@ void	sb(long int **tab_b, t_param *param, int message)
 		ft_putstr_fd("sb\n", 1);
 }
 
-void	ss(long int **tab_a, long int **tab_b, t_param *param)
+void	ss(t_param *param, long int **tab_a, long int **tab_b)
 {
-	sa(tab_a, param, 0);
-	sb(tab_b, param, 0);
+	sa(param, tab_a, 0);
+	sb(param, tab_b, 0);
 	ft_putstr_fd("ss\n", 1);
 }
 
-void	pa(long int **tab_a, long int **tab_b, t_param *param)
+void	pa(t_param *param, long int **tab_a, long int **tab_b)
 {
 	int	i;
 	int	tmp;
@@ -79,7 +79,7 @@ void	pa(long int **tab_a, long int **tab_b, t_param *param)
 	}
 }
 
-void	pb(long int **tab_a, long int **tab_b, t_param *param)
+void	pb(t_param *param, long int **tab_a, long int **tab_b)
 {
 	int	i;
 	int	tmp;

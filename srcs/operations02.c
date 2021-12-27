@@ -6,13 +6,13 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/24 14:53:07 by bifrah           ###   ########.fr       */
+/*   Updated: 2021/12/27 22:03:36 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	rtab(long int **tab, t_param *param, int sizetab, int message)
+void	rtab(t_param *param, long int **tab, int sizetab, int message)
 {
 	int			i;
 	long int	tmp;
@@ -40,14 +40,14 @@ void	rtab(long int **tab, t_param *param, int sizetab, int message)
 	}
 }
 
-void	rr(long int **tab_a, long int **tab_b, t_param *param)
+void	rr(t_param *param, long int **tab_a, long int **tab_b)
 {
-	rtab(tab_a, param, 1, 0);
-	rtab(tab_b, param, 2, 0);
+	rtab(param, tab_a, 1, 0);
+	rtab(param, tab_b, 2, 0);
 	ft_putstr_fd("rr\n", 1);
 }
 
-void	rrtab(long int **tab, t_param *param, int sizetab, int message)
+void	rrtab(t_param *param, long int **tab, int sizetab, int message)
 {
 	int			i;
 	long int	tmp;
@@ -75,9 +75,9 @@ void	rrtab(long int **tab, t_param *param, int sizetab, int message)
 	}
 }
 
-void	rrr(long int **tab_a, long int **tab_b, t_param *param)
+void	rrr(t_param *param, long int **tab_a, long int **tab_b)
 {
-	rrtab(tab_a, param, 1, 0);
-	rrtab(tab_b, param, 2, 0);
+	rrtab(param, tab_a, 1, 0);
+	rrtab(param, tab_b, 2, 0);
 	ft_putstr_fd("rrr\n", 1);
 }
