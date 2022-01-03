@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/03 22:49:30 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/03 23:05:24 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	create_tabs(t_param *param, int argc, char **argv)
 		return (EMPTY_ARG);
 	param->argc = argc;
 	param->size_a = argc - 1;
-	param->size_b = argc - 1;
+	param->size_b = 0;
 	param->numbers_a = argv_to_tab(argv + 1, param->size_a);
 	if (!param->numbers_a)
 	{
@@ -77,7 +77,7 @@ int	create_tabs(t_param *param, int argc, char **argv)
 	if (!param->numbers_b)
 		return (MALLOC_ERROR);
 	ft_bzero(param->numbers_b, param->size_b);
-	param->numbers_b[0] = 42;
-	param->numbers_b[1] = 222;
+	// param->numbers_b[0] = 42;
+	// param->numbers_b[1] = 222;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 21:18:40 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/27 22:01:35 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/03 22:53:46 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,13 @@ void	pa(t_param *param, long int **tab_a, long int **tab_b)
 	{
 		i = 0;
 		tmp = tab_b[0][0];
-		while (i < param->argc - 1)
+		while (i < param->size_b)
 		{
 			tab_b[0][i] = tab_b[0][i + 1];
 			i++;
 		}
 		tab_b[0][i] = 0;
-		i = param->argc - 1;
+		i = param->size_a;
 		while (i > 0)
 		{
 			tab_a[0][i] = tab_a[0][i - 1];
@@ -88,13 +88,13 @@ void	pb(t_param *param, long int **tab_a, long int **tab_b)
 	{
 		i = 0;
 		tmp = tab_a[0][0];
-		while (i < param->argc - 1)
+		while (i < param->size_a)
 		{
 			tab_a[0][i] = tab_a[0][i + 1];
 			i++;
 		}
 		tab_a[0][i] = 0;
-		i = param->argc - 1;
+		i = param->size_b;
 		while (i > 0)
 		{
 			tab_b[0][i] = tab_b[0][i - 1];
