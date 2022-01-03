@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/03 23:07:05 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/03 23:08:02 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ void		rrr(t_param *param, long int **tab_a, long int **tab_b);
 int			whoismin(t_param *param, long int *tab_a, int size);
 int			whoismax(t_param *param, long int *tab_b, int size);
 
-
-//#define $BR exit (0);
 #define ERROR			-2
 #define EMPTY_ARG		-3
 #define INPUT_ERROR		-4
