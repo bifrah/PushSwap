@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/03 23:05:24 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/04 20:55:27 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	whoismax(t_param *param, long int *tab, int size)
 
 int	create_tabs(t_param *param, int argc, char **argv)
 {
-	if (!(argc >= 3))
+	if (argc < 3)
 		return (EMPTY_ARG);
 	param->argc = argc;
 	param->size_a = argc - 1;
@@ -73,11 +73,9 @@ int	create_tabs(t_param *param, int argc, char **argv)
 		ft_putstr_fd("error\n", 1);
 		return (INPUT_ERROR);
 	}
-	param->numbers_b = (long int *)malloc(sizeof(long int) * (param->size_b));
+	param->numbers_b = (long int *)malloc(sizeof(long int) * (param->size_a));
 	if (!param->numbers_b)
 		return (MALLOC_ERROR);
-	ft_bzero(param->numbers_b, param->size_b);
-	// param->numbers_b[0] = 42;
-	// param->numbers_b[1] = 222;
+	ft_bzero(param->numbers_b, param->size_a);
 	return (0);
 }

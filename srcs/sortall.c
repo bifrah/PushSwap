@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/03 22:49:00 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/04 17:48:03 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@ void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
 {
 	while (tab_a[0][0] != whoismin(param, *tab_a, 1))
 	{
-		printf("tab[0] : %ld\n", tab_a[0][0]);
 		rtab(param, tab_a, 1, 1);
-		printf("rtab[0] : %ld\n", tab_a[0][0]);
 		if (tab_a[0][0] == whoismin(param, *tab_a, 1))
 			pb(param, tab_a, tab_b);
-		printf("after pb, tab[0] : %ld\n\n", tab_a[0][0]);
 	}
 }
 
