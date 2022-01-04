@@ -6,11 +6,22 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/04 22:17:14 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/04 22:25:46 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void ft_init(t_param *param, int argc)
+{
+	param->argc = argc;
+	param->size_a = argc - 1;
+	param->size_b = 0;
+	param->i = 0;
+	param->j = 0;
+	param->numbers_b = NULL;
+	param->numbers_a = NULL;
+}
 
 void	ft_free_tab(t_param param)
 {
@@ -24,6 +35,7 @@ int	main(int argc, char **argv)
 {
 	t_param	param;
 
+	ft_init(&param, argc);
 	if (create_tabs(&param, argc, argv) < 0)
 	{
 		ft_free_tab(param);
