@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/04 21:38:33 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/04 22:17:14 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_free_tab(t_param param)
 {
-	printf("%p", &(param.numbers_b));
 	if (param.numbers_a)
 		free(param.numbers_a);
 	if (param.numbers_b)
@@ -27,7 +26,6 @@ int	main(int argc, char **argv)
 
 	if (create_tabs(&param, argc, argv) < 0)
 	{
-		write(1, "ICITAMERE", 9);
 		ft_free_tab(param);
 		return (-1);
 	}
