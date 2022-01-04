@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2021/12/22 19:32:05 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/04 21:21:40 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	print_tab(int long *tab, int size)
 long int	*check_format(long int *tab, int size)
 {
 	if (ft_checkdouble(tab, size) < 0 || ft_maxandmin(tab, size) < 0)
-		ft_putstr_fd("error\n", 1);
+	{
+		free(tab);
+		return (NULL);
+	}
 	return (tab);
 }
 
@@ -75,7 +78,7 @@ long int	*argv_to_tab(char **argv, int size)
 		else
 		{
 			free(tab);
-			return (0);
+			return (NULL);
 		}
 	}
 	return (check_format(tab, size));
