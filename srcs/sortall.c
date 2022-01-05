@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 13:43:34 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 13:55:24 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,15 @@ int	ft_checksort(t_param *param, long int **tab_a)
 
 void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
 {
+	int	totalsize;
 	int	max_num;
 	int	max_bits;
 	int	num;
 	int	i;
 	int	j;
 
-	max_num = param->size_a - 1;
+	totalsize = param->size_a;
+	max_num = totalsize - 1;
 	max_bits = 0;
 	num = 0;
 	i = -1;
@@ -61,7 +63,7 @@ void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
 	while (++i < max_bits)
 	{
 		j = -1;
-		while (++j < param->size_a)
+		while (++j < totalsize)
 		{
 			num = tab_a[0][0];
 			if (((num >> i) & 1) == 1)
