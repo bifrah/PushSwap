@@ -6,26 +6,11 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:34:40 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 15:45:14 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-//   struct Stack helper_stack;
-//   while (!IsEmpty(orig_stack))
-//   {
-//     int element = Pop(orig_stack);
-//     while (!IsEmpty(&helper_stack) && Top(&helper_stack) < element)
-//     {
-//       Push(orig_stack, Pop(&helper_stack));
-//     }
-//     Push(&helper_stack, element);
-//   }
-//   while (!IsEmpty(&helper_stack))
-//   {
-//     Push(orig_stack, Pop(&helper_stack));
-//   }
 
 int	ft_checksort(t_param *param, long int **tab_a)
 {
@@ -49,24 +34,22 @@ void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
 	int	max_num;
 	int	max_bits;
 	int	num;
-	int	i;
-	int	j;
 
 	totalsize = param->size_a;
 	max_num = whoismax(*tab_a, param->size_a) - 1;
 	max_bits = 0;
 	num = 0;
-	i = -1;
-	j = 0;
+	param->i = -1;
+	param->j = 0;
 	while ((max_num >> max_bits) != 0)
 		++max_bits;
-	while (++i <= max_bits)
+	while (++param->i <= max_bits)
 	{
-		j = -1;
-		while (++j < totalsize)
+		param->j = -1;
+		while (++param->j < totalsize)
 		{
 			num = tab_a[0][0];
-			if (((num >> i) & 1) == 1)
+			if (((num >> param->i) & 1) == 1)
 				rtab(param, tab_a, 1, 1);
 			else
 				pb(param, tab_a, tab_b);
