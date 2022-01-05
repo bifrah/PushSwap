@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 15:45:14 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 15:47:34 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_checksort(t_param *param, long int **tab_a)
 	return (0);
 }
 
-void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
+void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
 {
 	int	totalsize;
 	int	max_num;

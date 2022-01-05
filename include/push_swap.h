@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:04:25 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 15:47:47 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ long int	*argv_to_tab(char **argv, int size);
 long int	*check_format(long int *tab, int size);
 int			ft_checkdouble(long int *tab, int size);
 int			ft_maxandmin(long int *tab, int size);
-void		ft_sortall(t_param *param, long int **tab_a, long int **tab_b);
+void		ft_radix(t_param *param, long int **tab_a, long int **tab_b);
 void		sa(t_param *param, long int **tab_a, int message);
 void		sb(t_param *param, long int **tab_b, int message);
 void		ss(t_param *param, long int **tab_a, long int **tab_b);
