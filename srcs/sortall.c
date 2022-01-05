@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:08:17 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 14:34:40 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
 	j = 0;
 	while ((max_num >> max_bits) != 0)
 		++max_bits;
-	while (++i < max_bits)
+	while (++i <= max_bits)
 	{
 		j = -1;
 		while (++j < totalsize)
