@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 02:21:39 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 14:03:06 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,6 @@ int	whoismin(t_param *param, long int *tab, int size)
 	int	i;
 	int	min;
 
-	if (size == 1)
-		size = param->size_a;
-	if (size == 2)
-		size = param->size_b;
 	i = 0;
 	min = 2147483647;
 	while (i < size)
@@ -44,10 +40,6 @@ int	whoismax(t_param *param, long int *tab, int size)
 	int	i;
 	int	max;
 
-	if (size == 1)
-		size = param->size_a;
-	if (size == 2)
-		size = param->size_b;
 	i = 0;
 	max = -2147483648;
 	while (i < size)
