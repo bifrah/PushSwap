@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:03:06 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 14:04:15 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_issign(int c)
 	return (0);
 }
 
-int	whoismin(t_param *param, long int *tab, int size)
+int	whoismin(long int *tab, int size)
 {
 	int	i;
 	int	min;
@@ -35,7 +35,7 @@ int	whoismin(t_param *param, long int *tab, int size)
 	return (min);
 }
 
-int	whoismax(t_param *param, long int *tab, int size)
+int	whoismax(long int *tab, int size)
 {
 	int	i;
 	int	max;

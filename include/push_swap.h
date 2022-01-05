@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 13:59:00 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 14:04:25 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void		rtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rr(t_param *param, long int **tab_a, long int **tab_b);
 void		rrtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rrr(t_param *param, long int **tab_a, long int **tab_b);
-int			whoismin(t_param *param, long int *tab, int size);
-int			whoismax(t_param *param, long int *tab, int size);
+int			whoismin(long int *tab, int size);
+int			whoismax(long int *tab, int size);
 
 #define ERROR			-2
 #define EMPTY_ARG		-3
