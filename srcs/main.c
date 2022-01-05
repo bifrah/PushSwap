@@ -6,13 +6,13 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 11:20:27 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 13:18:48 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void ft_init(t_param *param, int argc)
+void	ft_init(t_param *param, int argc)
 {
 	param->argc = argc;
 	param->size_a = argc - 1;
