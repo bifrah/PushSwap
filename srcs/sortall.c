@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 13:55:24 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 14:08:17 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_sortall(t_param *param, long int **tab_a, long int **tab_b)
 	int	j;
 
 	totalsize = param->size_a;
-	max_num = totalsize - 1;
+	max_num = whoismax(*tab_a, param->size_a) - 1;
 	max_bits = 0;
 	num = 0;
 	i = -1;
