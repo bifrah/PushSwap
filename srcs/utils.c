@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:04:15 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 14:42:43 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int	whoismax(long int *tab, int size)
 	{
 		if (tab[i] > max)
 			max = tab[i];
-		printf("max : %d\n", max);
 		i++;
 	}
 	return (max);

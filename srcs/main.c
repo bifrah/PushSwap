@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:06:57 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 15:21:54 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int	main(int argc, char **argv)
 	// print_tab(param.numbers_b, param.size_b);
 	// write(1, "\n", 1);
 	ft_sortall(&param, &param.numbers_a, &param.numbers_b);
-	// printf("\nsize_A : %d\n", param.size_a);
-	// print_tab(param.numbers_a, param.size_a);
-	// printf("\nsize_B : %d\n", param.size_b);
-	// print_tab(param.numbers_b, param.size_b);
+	printf("\nsize_A : %d\n", param.size_a);
+	print_tab(param.numbers_a, param.size_a);
+	printf("\nsize_B : %d\n", param.size_b);
+	print_tab(param.numbers_b, param.size_b);
 	ft_free_tab(param);
 }
