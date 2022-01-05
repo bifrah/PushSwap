@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 14:42:43 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 17:28:03 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@ int	ft_issign(int c)
 	if (c == '-' || c == '+')
 		return (1);
 	return (0);
+}
+
+int	minforassign(long int *tab, int size, int min)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (tab[i] < min)
+			min = tab[i];
+		i++;
+	}
+	return (min);
 }
 
 int	whoismin(long int *tab, int size)

@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 15:47:56 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/05 17:56:24 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,30 @@ void	ft_free_tab(t_param param)
 		free(param.numbers_b);
 }
 
+int	ft_optimize(t_param param)
+{
+	int	i;
+	int	numtoassign;
+	int	tmp;
+
+	i = 0;
+	numtoassign = 0;
+	tmp = whoismin(param.numbers_a, param.size_a);
+	while (i < param.size_a)
+	{
+		if (param.numbers_a[i] == tmp)
+		{
+			param.numbers_a[i] = numtoassign;
+			numtoassign++;
+			printf("tab[%d] : %ld\n", i, param.numbers_a[i]);
+		}
+		else
+			i++;
+		tmp = minforassign(param.numbers_a, param.size_a, numtoassign - 1);
+	}
+	return (0);
+}
+
 int	main(int argc, char **argv)
 {
 	t_param	param;
@@ -41,6 +65,7 @@ int	main(int argc, char **argv)
 		ft_free_tab(param);
 		return (-1);
 	}
+	ft_optimize(param);
 	// printf("size_A : %d\n", param.size_a);
 	// print_tab(param.numbers_a, param.size_a);
 	// printf("\nsize_B : %d\n", param.size_b);
