@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 17:28:03 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/06 15:03:12 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@ int	ft_issign(int c)
 	return (0);
 }
 
-int	minforassign(long int *tab, int size, int min)
+int	minforassign(long int *tab, int size, int lastmin)
 {
 	int	i;
+	int	min;
 
 	i = 0;
+	min = 2147483647;
 	while (i < size)
 	{
-		if (tab[i] < min)
+		if (tab[i] < min && tab[i] > lastmin)
 			min = tab[i];
 		i++;
 	}
@@ -78,6 +80,8 @@ int	create_tabs(t_param *param, int argc, char **argv)
 		ft_putstr_fd("Error\n", 2);
 		return (INPUT_ERROR);
 	}
+	if (param->numbers_a)
+		param->copy_a = argv_to_tab(argv + 1, param->size_a);
 	param->numbers_b = (long int *)malloc(sizeof(long int) * (param->size_a));
 	if (!(param->numbers_b))
 		return (MALLOC_ERROR);

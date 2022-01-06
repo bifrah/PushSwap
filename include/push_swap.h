@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 17:27:42 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/06 14:45:35 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 typedef struct s_param {
 	long int	*numbers_a;
+	long int	*copy_a;
 	long int	*numbers_b;
 	int			size_a;
 	int			size_b;
