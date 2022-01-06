@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/06 15:57:11 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/06 16:44:18 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,27 @@ int	ft_optimize(t_param param)
 	int	numtoassign;
 	int	tmp;
 	int	lasttmp;
+	int	count;
 
-	i = 0;
 	numtoassign = 0;
 	tmp = whoismin(param.copy_a, param.size_a);
-	while (i < param.size_a)
+	count = 0;
+	while (count < param.size_a)
 	{
-		if (param.numbers_a[i] == tmp)
+		i = 0;
+		while (i < param.size_a)
 		{
-			param.numbers_a[i] = numtoassign;
-			numtoassign++;
-			printf("tab[%d] : %ld\n", i, param.numbers_a[i]);
+			if (param.numbers_a[i] == tmp)
+			{
+				param.numbers_a[i] = numtoassign;
+				numtoassign++;
+				i = param.size_a;
+			}
+			i++;
 		}
-		i++;
 		lasttmp = tmp;
 		tmp = minforassign(param.copy_a, param.size_a, lasttmp);
+		count++;
 	}
 	return (0);
 }
@@ -68,11 +74,12 @@ int	main(int argc, char **argv)
 		ft_free_tab(param);
 		return (-1);
 	}
-	ft_optimize(param);
 	printf("size_A : %d\n", param.size_a);
 	print_tab(param.numbers_a, param.size_a);
 	printf("\nsize_B : %d\n", param.size_b);
 	print_tab(param.numbers_b, param.size_b);
+	write(1, "\n", 1);
+	ft_optimize(param);
 	write(1, "\n", 1);
 	// ft_radix(&param, &param.numbers_a, &param.numbers_b);
 	printf("\nsize_A : %d\n", param.size_a);
