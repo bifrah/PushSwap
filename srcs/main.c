@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/06 16:44:18 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/06 18:54:08 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	ft_optimize(t_param param)
 	int	i;
 	int	numtoassign;
 	int	tmp;
-	int	lasttmp;
 	int	count;
 
 	numtoassign = 0;
@@ -51,14 +50,16 @@ int	ft_optimize(t_param param)
 		{
 			if (param.numbers_a[i] == tmp)
 			{
+				printf("num: %d\n", numtoassign);
+				printf("number_a: %ld\n", param.numbers_a[i]);
 				param.numbers_a[i] = numtoassign;
 				numtoassign++;
 				i = param.size_a;
 			}
 			i++;
 		}
-		lasttmp = tmp;
-		tmp = minforassign(param.copy_a, param.size_a, lasttmp);
+		printf("tmp: %d\n\n", tmp);
+		tmp = minforassign(param.copy_a, param.size_a, tmp);
 		count++;
 	}
 	return (0);
