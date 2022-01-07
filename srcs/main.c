@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 20:05:43 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/08 00:14:59 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,8 @@ int	main(int argc, char **argv)
 	}
 	if (argc <= 4)
 		ft_3arg(&param);
-	// else if (argc == 6)
-	// 	ft_5arg(&param);
+	else if (argc == 6)
+		ft_5arg(&param);
 	else
 		ft_radix(&param, &param.a, &param.b);
 	ft_free_tab(&param);
