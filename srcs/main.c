@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:28:58 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 20:00:32 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,11 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 2);
 		return (-1);
 	}
-	ft_radix(&param, &param.numbers_a, &param.numbers_b);
+	if (argc <= 4)
+		ft_3arg(&param);
+	// else if (argc == 6)
+	// 	ft_5arg(&param);
+	else
+		ft_radix(&param, &param.numbers_a, &param.numbers_b);
 	ft_free_tab(&param);
 }

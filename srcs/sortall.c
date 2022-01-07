@@ -6,11 +6,27 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:42:32 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:56:52 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	ft_3arg(t_param *param)
+{
+	if (param->numbers_a[2] > param->numbers_a[1])
+		sa(param, &param->numbers_a, 1);
+	if (param->numbers_a[1] > param->numbers_a[2]
+		&& param->numbers_a[1] > param->numbers_a[0])
+		rrtab(param, &param->numbers_a, param->size_a, 1);
+	if (param->numbers_a[2] > param->numbers_a[1])
+		sa(param, &param->numbers_a, 1);
+}
+
+// void	ft_5arg(t_param *param)
+// {
+
+// }
 
 void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
 {

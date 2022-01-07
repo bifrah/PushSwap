@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:41:41 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:57:43 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ long int	*check_format(long int *tab, int size);
 int			ft_checkdouble(long int *tab, int size);
 int			ft_maxandmin(long int *tab, int size);
 void		ft_radix(t_param *param, long int **tab_a, long int **tab_b);
+void		ft_3arg(t_param *param);
+void		ft_5arg(t_param *param);
 void		sa(t_param *param, long int **tab_a, int message);
 void		sb(t_param *param, long int **tab_b, int message);
 void		ss(t_param *param, long int **tab_a, long int **tab_b);
