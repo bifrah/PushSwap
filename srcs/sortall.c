@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/08 00:16:37 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/08 00:34:03 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ft_3arg(t_param *param)
 
 void	ft_5arg(t_param *param)
 {
+	// print_tab(param->a, param->size_a);
 	while (param->size_b < 2)
 	{
 		if (param->a[param->size_a - 1] == 0 || param->a[param->size_a - 1] == 1)
@@ -38,10 +39,13 @@ void	ft_5arg(t_param *param)
 			rtab(param, &param->a, 1, 1);
 	}
 	ft_3arg(param);
+	print_tab(param->a, param->size_a);
+	write(1, "\n", 1);
 	if (param->b[1] < param->b[0])
 		sb(param, &param->b, 2);
 	while (param->size_b > 0)
 		pa(param, &param->a, &param->b);
+	print_tab(param->a, param->size_a);
 }
 
 void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
