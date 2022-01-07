@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 17:40:15 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:26:33 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ int			minforassign(long int *tab, int size, int min);
 #define EMPTY_ARG		-3
 #define INPUT_ERROR		-4
 #define MALLOC_ERROR	-5
+#define SORTED			-6
 
 #endif

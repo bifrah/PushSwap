@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 17:35:36 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:27:26 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,21 @@ int	ft_optimize(t_param *param)
 	return (0);
 }
 
+int	ft_thank_you(t_param *param)
+{
+	int	i;
+
+	i = 0;
+	while (i + 1 < param->size_a)
+	{
+		if (param->numbers_a[i] < param->numbers_a[i + 1])
+			i++;
+		else
+			return (-1);
+	}
+	return (SORTED);
+}
+
 int	main(int argc, char **argv)
 {
 	t_param	param;
@@ -69,6 +84,11 @@ int	main(int argc, char **argv)
 	ft_init(&param, argc);
 	if (create_tabs(&param, argc, argv) < 0)
 		return (-1);
+	if (ft_thank_you(&param) == SORTED)
+	{
+		ft_free_tab(&param);
+		return (0);
+	}
 	if (ft_optimize(&param) == MALLOC_ERROR)
 	{
 		ft_free_tab(&param);
