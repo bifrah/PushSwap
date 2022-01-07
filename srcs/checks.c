@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:32:09 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 20:05:40 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	ft_thank_you(t_param *param)
 	i = 0;
 	while (i + 1 < param->size_a)
 	{
-		if (param->numbers_a[i] < param->numbers_a[i + 1])
+		if (param->a[i] < param->a[i + 1])
 			i++;
 		else
 			return (-1);

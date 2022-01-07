@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 20:00:32 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 20:05:43 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ void	ft_init(t_param *param, int argc)
 	param->size_b = 0;
 	param->i = 0;
 	param->j = 0;
-	param->numbers_b = NULL;
-	param->numbers_a = NULL;
+	param->b = NULL;
+	param->a = NULL;
 }
 
 void	ft_free_tab(t_param *param)
 {
-	if (param->numbers_a)
-		free(param->numbers_a);
+	if (param->a)
+		free(param->a);
 	if (param->copy_a)
 		free(param->copy_a);
-	if (param->numbers_b)
-		free(param->numbers_b);
+	if (param->b)
+		free(param->b);
 }
 
 int	ft_optimize(t_param *param)
@@ -63,14 +63,14 @@ int	ft_optimize(t_param *param)
 		param->i = -1;
 		while (++param->i < param->size_a)
 		{
-			if (param->numbers_a[param->i] != tmp)
+			if (param->a[param->i] != tmp)
 				continue ;
 			tmptab[param->i] = numtoassign++;
 		}
 		tmp = minforassign(param->copy_a, param->size_a, tmp);
 	}
-	free(param->numbers_a);
-	param->numbers_a = tmptab;
+	free(param->a);
+	param->a = tmptab;
 	return (0);
 }
 
@@ -97,6 +97,6 @@ int	main(int argc, char **argv)
 	// else if (argc == 6)
 	// 	ft_5arg(&param);
 	else
-		ft_radix(&param, &param.numbers_a, &param.numbers_b);
+		ft_radix(&param, &param.a, &param.b);
 	ft_free_tab(&param);
 }

@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:57:43 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 20:05:33 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 # include <limits.h>
 
 typedef struct s_param {
-	long int	*numbers_a;
+	long int	*a;
 	long int	*copy_a;
-	long int	*numbers_b;
+	long int	*b;
 	int			size_a;
 	int			size_b;
 	int			argc;
