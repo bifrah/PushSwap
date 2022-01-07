@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/06 14:45:35 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 17:40:15 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_param {
 void		print_tab(int long *tab, int size);
 int			ft_issign(int c);
 int			create_tabs(t_param *param, int argc, char **argv);
+int			ft_optimize(t_param *param);
 int			ft_argisvalid(char *argv);
 long int	*argv_to_tab(char **argv, int size);
 long int	*check_format(long int *tab, int size);

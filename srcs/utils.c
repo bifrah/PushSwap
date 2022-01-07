@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 17:02:56 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 17:35:11 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,9 @@ int	create_tabs(t_param *param, int argc, char **argv)
 		param->copy_a = argv_to_tab(argv + 1, param->size_a);
 	param->numbers_b = (long int *)malloc(sizeof(long int) * (param->size_a));
 	if (!(param->numbers_b))
+	{
+		ft_putstr_fd("Error\n", 2);
 		return (MALLOC_ERROR);
+	}
 	return (0);
 }

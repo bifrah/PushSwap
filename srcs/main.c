@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 17:04:39 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 17:35:36 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,49 +29,36 @@ void	ft_free_tab(t_param *param)
 		free(param->numbers_a);
 	if (param->copy_a)
 		free(param->copy_a);
-	if (param->numbers_b) //PROBLEME AVEC CE FREE AVEC CETTE SEQUENCE : ./push_swap 9 8 7 6 5 4 3 2 1 
+	if (param->numbers_b)
 		free(param->numbers_b);
 }
 
 int	ft_optimize(t_param *param)
 {
-	int	i;
-	int	numtoassign;
-	int	tmp;
-	int	count;
+	int			numtoassign;
+	int			tmp;
+	int			count;
 	long int	*tmptab;
 
 	tmptab = (long int *)malloc(sizeof(long int) * param->size_a);
 	if (!tmptab)
-		return (0);
-	ft_bzero(tmptab, param->size_a);
+		return (MALLOC_ERROR);
 	numtoassign = 0;
 	tmp = whoismin(param->copy_a, param->size_a);
-	count = 0;
-	while (count < param->size_a)
+	count = -1;
+	while (++count < param->size_a)
 	{
-		i = 0;
-		while (i < param->size_a)
+		param->i = -1;
+		while (++param->i < param->size_a)
 		{
-			if (param->numbers_a[i] == tmp)
-			{
-				printf("num a inserer: %d\n", numtoassign);
-				printf("number_a: %ld\n", param->numbers_a[i]);
-				tmptab[i] = numtoassign;
-				printf("number_a insere: %ld\n", tmptab[i]);
-				numtoassign++;
-				i = param->size_a;
-			}
-			i++;
+			if (param->numbers_a[param->i] != tmp)
+				continue ;
+			tmptab[param->i] = numtoassign++;
 		}
-		printf("tmp: %d\n\n", tmp);
 		tmp = minforassign(param->copy_a, param->size_a, tmp);
-		count++;
 	}
 	free(param->numbers_a);
 	param->numbers_a = tmptab;
-	write(1, "\n", 1);
-	print_tab(param->numbers_a, param->size_a);
 	return (0);
 }
 
@@ -82,17 +69,12 @@ int	main(int argc, char **argv)
 	ft_init(&param, argc);
 	if (create_tabs(&param, argc, argv) < 0)
 		return (-1);
-	printf("size_A : %d\n", param.size_a);
-	print_tab(param.numbers_a, param.size_a);
-	printf("\nsize_B : %d\n", param.size_b);
-	print_tab(param.numbers_b, param.size_b);
-	write(1, "\n", 1);
-	ft_optimize(&param);
-	write(1, "\n", 1);
+	if (ft_optimize(&param) == MALLOC_ERROR)
+	{
+		ft_free_tab(&param);
+		ft_putstr_fd("Error\n", 2);
+		return (-1);
+	}
 	ft_radix(&param, &param.numbers_a, &param.numbers_b);
-	printf("\nsize_A : %d\n", param.size_a);
-	print_tab(param.numbers_a, param.size_a);
-	printf("\nsize_B : %d\n", param.size_b);
-	print_tab(param.numbers_b, param.size_b);
 	ft_free_tab(&param);
 }
