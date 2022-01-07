@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:30:19 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:41:41 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ typedef struct s_param {
 	int			argc;
 	int			i;
 	int			j;
+	int			max_num;
+	int			max_bits;
 }				t_param;
 
 int			ft_thank_you(t_param *param);
