@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 22:39:21 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/08 00:16:37 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,35 @@
 
 void	ft_3arg(t_param *param)
 {
-	if (param->a[1] > param->a[0])
+	if (param->a[0] > param->a[1] && param->a[1] > param->a[2])
 		sa(param, &param->a, 1);
-	if (param->a[1] > param->a[2]
-		&& param->a[1] > param->a[0])
-		rrtab(param, &param->a, param->size_a, 1);
-	if (param->a[1] > param->a[0])
+	if (param->a[1] > param->a[2] && param->a[1] > param->a[0]
+		&& param->a[0] > param->a[2])
+		rrtab(param, &param->a, 1, 1);
+	if (param->a[0] > param->a[1] && param->a[2] > param->a[0])
 		sa(param, &param->a, 1);
+	if (param->a[0] < param->a[1] && param->a[2] < param->a[1]
+		&& param->a[0] < param->a[2])
+		sa(param, &param->a, 1);
+	if (param->a[0] > param->a[2])
+		rtab(param, &param->a, 1, 1);
 }
 
-// void	ft_5arg(t_param *param)
-// {
-
-// }
+void	ft_5arg(t_param *param)
+{
+	while (param->size_b < 2)
+	{
+		if (param->a[param->size_a - 1] == 0 || param->a[param->size_a - 1] == 1)
+			pb(param, &param->a, &param->b);
+		else
+			rtab(param, &param->a, 1, 1);
+	}
+	ft_3arg(param);
+	if (param->b[1] < param->b[0])
+		sb(param, &param->b, 2);
+	while (param->size_b > 0)
+		pa(param, &param->a, &param->b);
+}
 
 void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
 {
