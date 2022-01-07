@@ -6,11 +6,23 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:27:26 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:28:58 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	print_tab(int long *tab, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		printf("%ld\n", tab[i]);
+		i++;
+	}
+}
 
 void	ft_init(t_param *param, int argc)
 {
@@ -60,21 +72,6 @@ int	ft_optimize(t_param *param)
 	free(param->numbers_a);
 	param->numbers_a = tmptab;
 	return (0);
-}
-
-int	ft_thank_you(t_param *param)
-{
-	int	i;
-
-	i = 0;
-	while (i + 1 < param->size_a)
-	{
-		if (param->numbers_a[i] < param->numbers_a[i + 1])
-			i++;
-		else
-			return (-1);
-	}
-	return (SORTED);
 }
 
 int	main(int argc, char **argv)

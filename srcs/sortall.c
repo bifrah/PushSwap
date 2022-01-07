@@ -6,27 +6,11 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/05 15:47:34 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:31:28 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-int	ft_checksort(t_param *param, long int **tab_a)
-{
-	int	i;
-
-	i = 0;
-	if (param->size_b != 0)
-		return (-1);
-	while (i + 1 < param->size_a)
-	{
-		if (tab_a[0][i] > tab_a[0][i + 1])
-			return (-1);
-		i++;
-	}
-	return (0);
-}
 
 void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
 {

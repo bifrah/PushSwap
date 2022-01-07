@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:26:33 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:30:19 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ typedef struct s_param {
 	int			j;
 }				t_param;
 
-void		print_tab(int long *tab, int size);
+int			ft_thank_you(t_param *param);
 int			ft_issign(int c);
+int			minforassign(long int *tab, int size, int min);
+int			whoismin(long int *tab, int size);
+int			whoismax(long int *tab, int size);
 int			create_tabs(t_param *param, int argc, char **argv);
 int			ft_optimize(t_param *param);
 int			ft_argisvalid(char *argv);
@@ -49,9 +52,8 @@ void		rtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rr(t_param *param, long int **tab_a, long int **tab_b);
 void		rrtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rrr(t_param *param, long int **tab_a, long int **tab_b);
-int			whoismin(long int *tab, int size);
-int			whoismax(long int *tab, int size);
-int			minforassign(long int *tab, int size, int min);
+
+void		print_tab(int long *tab, int size); // a delete a la fin
 
 #define ERROR			-2
 #define EMPTY_ARG		-3

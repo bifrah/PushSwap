@@ -6,22 +6,34 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 16:58:22 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 19:28:49 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	print_tab(int long *tab, int size)
+int	create_tabs(t_param *param, int argc, char **argv)
 {
-	int	i;
-
-	i = 0;
-	while (i < size)
+	if (argc < 3)
 	{
-		printf("%ld\n", tab[i]);
-		i++;
+		ft_putstr_fd("Error\n", 2);
+		return (EMPTY_ARG);
 	}
+	param->numbers_a = argv_to_tab(argv + 1, param->size_a);
+	if (!param->numbers_a)
+	{
+		ft_putstr_fd("Error\n", 2);
+		return (INPUT_ERROR);
+	}
+	if (param->numbers_a)
+		param->copy_a = argv_to_tab(argv + 1, param->size_a);
+	param->numbers_b = (long int *)malloc(sizeof(long int) * (param->size_a));
+	if (!(param->numbers_b))
+	{
+		ft_putstr_fd("Error\n", 2);
+		return (MALLOC_ERROR);
+	}
+	return (0);
 }
 
 long int	*check_format(long int *tab, int size)
