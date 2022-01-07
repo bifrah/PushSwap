@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 20:05:53 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/07 22:39:21 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_3arg(t_param *param)
 {
-	if (param->a[2] > param->a[1])
+	if (param->a[1] > param->a[0])
 		sa(param, &param->a, 1);
 	if (param->a[1] > param->a[2]
 		&& param->a[1] > param->a[0])
 		rrtab(param, &param->a, param->size_a, 1);
-	if (param->a[2] > param->a[1])
+	if (param->a[1] > param->a[0])
 		sa(param, &param->a, 1);
 }
 
