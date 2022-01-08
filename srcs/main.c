@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/08 00:14:59 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/08 02:59:22 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ int	main(int argc, char **argv)
 {
 	t_param	param;
 
+	if (argc < 3)
+		return (-1);
 	ft_init(&param, argc);
 	if (create_tabs(&param, argc, argv) < 0)
 		return (-1);
