@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 17:00:48 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 19:32:02 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/10 17:09:23 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,25 @@ int	whoismin(long int *tab, int size)
 		i++;
 	}
 	return (min);
+}
+
+int	whoisminindex(long int *tab, int size)
+{
+	int	i;
+	int	min;
+
+	i = 0;
+	min = 2147483647;
+	while (i < size)
+	{
+		if (tab[i] < min)
+			min = tab[i];
+		i++;
+	}
+	i = 0;
+	while (tab[i] != min)
+		i++;
+	return (i - 1);
 }
 
 int	whoismax(long int *tab, int size)

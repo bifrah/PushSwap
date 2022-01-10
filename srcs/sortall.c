@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/08 01:53:07 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/10 17:08:15 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,20 @@ void	ft_5arg(t_param *param)
 {
 	while (param->size_b < 2)
 	{
-		if (param->a[0] == 1
-			|| param->a[0] == 0)
-			pb(param, &param->a, &param->b);
-		rtab(param, &param->a, 1, 1);
+		while (whoisminindex(param->a, param->size_a) != 0)
+		{
+			if (param->a[0] == 1
+				|| param->a[0] == 0)
+				pb(param, &param->a, &param->b);
+			if (whoisminindex(param->a, param->size_a) > 2)
+				rrtab(param, &param->a, 1, 1);
+			else
+				rtab(param, &param->a, 1, 1);
+		}
+		// if (param->a[0] == 1
+		// 	|| param->a[0] == 0)
+		// 	pb(param, &param->a, &param->b);
+		// rtab(param, &param->a, 1, 1);
 	}
 	ft_3arg(param);
 	if (param->b[1] > param->b[0])
@@ -50,7 +60,7 @@ void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
 	int	num;
 
 	totalsize = param->size_a;
-	param->max_num = whoismax(*tab_a, param->size_a) - 1;
+	param->max_num = param->size_a - 1;
 	param->max_bits = 0;
 	num = 0;
 	param->i = -1;

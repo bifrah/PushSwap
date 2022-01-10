@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 20:05:33 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/10 17:03:02 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int			ft_thank_you(t_param *param);
 int			ft_issign(int c);
 int			minforassign(long int *tab, int size, int min);
 int			whoismin(long int *tab, int size);
+int			whoisminindex(long int *tab, int size);
 int			whoismax(long int *tab, int size);
 int			create_tabs(t_param *param, int argc, char **argv);
 int			ft_optimize(t_param *param);
