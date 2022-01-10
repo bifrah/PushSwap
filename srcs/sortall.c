@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/10 17:08:15 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/10 18:07:33 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,14 @@ void	ft_5arg(t_param *param)
 {
 	while (param->size_b < 2)
 	{
-		while (whoisminindex(param->a, param->size_a) != 0)
-		{
-			if (param->a[0] == 1
-				|| param->a[0] == 0)
-				pb(param, &param->a, &param->b);
-			if (whoisminindex(param->a, param->size_a) > 2)
-				rrtab(param, &param->a, 1, 1);
-			else
-				rtab(param, &param->a, 1, 1);
-		}
-		// if (param->a[0] == 1
-		// 	|| param->a[0] == 0)
-		// 	pb(param, &param->a, &param->b);
-		// rtab(param, &param->a, 1, 1);
+		if (param->a[0] == 1
+			|| param->a[0] == 0)
+			pb(param, &param->a, &param->b);
+		if (whoismin(param->a, param->size_a) == param->a[4]
+			|| whoismin(param->a, param->size_a) == param->a[3])
+			rrtab(param, &param->a, 1, 1);
+		else
+			rtab(param, &param->a, 1, 1);
 	}
 	ft_3arg(param);
 	if (param->b[1] > param->b[0])
