@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 01:59:03 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:05:47 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	main(int argc, char **argv)
 {
 	t_param	param;
 
-	if (argc < 3)
+	if (argc < 2)
 		return (-1);
 	ft_init(&param, argc);
 	if (create_tabs(&param, argc, argv) < 0)
@@ -105,8 +105,5 @@ int	main(int argc, char **argv)
 
 /*
 to do :
-
-- regler si on donne "" seul ou avec des arguments
-- regler le nombre de coup pour arg 4
 - faire un sort pour 100 arg
 */

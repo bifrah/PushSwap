@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 16:58:09 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 20:05:40 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 13:47:28 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,20 @@ int	ft_maxandmin(long int *tab, int size)
 	while (i >= 0)
 	{
 		if (tab[i] < min || tab[i] > max)
+			return (-1);
+		i--;
+	}
+	return (0);
+}
+
+int	ft_checkvoid(long int *tab, int size)
+{
+	int	i;
+
+	i = size - 1;
+	while (i >= 0)
+	{
+		if (!tab[i])
 			return (-1);
 		i--;
 	}

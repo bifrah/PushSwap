@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/07 20:05:51 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 14:02:08 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	ft_argisvalid(char *argv)
 	t_param	param;
 
 	param.i = 0;
-	if (argv == NULL)
-		return (0);
+	if (argv == NULL || !argv[0])
+		return (-1);
 	while (argv[param.i])
 	{	
 		if (ft_issign(argv[param.i]) == 1 && param.i == 0)
