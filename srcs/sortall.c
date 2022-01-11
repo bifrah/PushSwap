@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 13:20:25 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 19:18:58 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,32 @@ void	ft_5arg(t_param *param)
 		pa(param, &param->a, &param->b);
 }
 
+void	ft_initradix(t_param *param, int *totalsize, int *num)
+{
+	param->max_num = param->size_a - 1;
+	param->max_bits = 0;
+	param->i = -1;
+	param->j = 0;
+	*totalsize = param->size_a;
+	*num = 0;
+	while ((param->max_num >> param->max_bits) != 0)
+		++param->max_bits;
+}
+
 void	ft_radix(t_param *param, long int **tab_a, long int **tab_b)
 {
 	int	totalsize;
 	int	num;
 
-	totalsize = param->size_a;
-	param->max_num = param->size_a - 1;
-	param->max_bits = 0;
-	num = 0;
-	param->i = -1;
-	param->j = 0;
-	while ((param->max_num >> param->max_bits) != 0)
-		++param->max_bits;
+	ft_initradix(param, &totalsize, &num);
 	while (++param->i <= param->max_bits)
 	{
+		if (ft_thank_you(param) == SORTED)
+		{
+			while (param->size_b > 0)
+				pa(param, tab_a, tab_b);
+			return ;
+		}
 		param->j = -1;
 		while (++param->j < totalsize)
 		{

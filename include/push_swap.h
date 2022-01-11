@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 13:47:00 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 18:26:53 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ typedef struct s_param {
 	int			max_num;
 	int			max_bits;
 }				t_param;
+
+typedef struct s_chunk {
+	int		chunklen;
+	int		chunklenrest;
+	int		actualchunk;
+}				t_chunk;
 
 int			ft_thank_you(t_param *param);
 int			ft_issign(int c);
