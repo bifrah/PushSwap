@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:53:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 01:28:45 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 01:56:49 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,40 @@ void	ft_3arg(t_param *param)
 
 void	ft_5arg(t_param *param)
 {
-	while (param->size_b < 2)
+	if (param->argc == 5)
 	{
-		if (param->a[0] == 1
-			|| param->a[0] == 0)
-			pb(param, &param->a, &param->b);
-		if (whoismin(param->a, param->size_a) == param->a[param->size_a - 1]
-			|| whoismin(param->a, param->size_a) == param->a[param->size_a - 2])
-			rrtab(param, &param->a, 1, 1);
-		else
-			rtab(param, &param->a, 1, 1);
+		while (param->size_b < 1)
+		{
+			if (param->a[0] == 1
+				|| param->a[0] == 0)
+				pb(param, &param->a, &param->b);
+			if (whoismin(param->a, param->size_a) == param->a[param->size_a - 1]
+				|| whoismin(param->a, param->size_a) == param->a[param->size_a - 2])
+				rrtab(param, &param->a, 1, 1);
+			else
+				rtab(param, &param->a, 1, 1);
+		}
+	}
+	if (param->argc == 6)
+	{
+		while (param->size_b < 2)
+		{
+			if (param->a[0] == 1
+				|| param->a[0] == 0)
+				pb(param, &param->a, &param->b);
+			if (whoismin(param->a, param->size_a) == param->a[param->size_a - 1]
+				|| whoismin(param->a, param->size_a) == param->a[param->size_a - 2])
+				rrtab(param, &param->a, 1, 1);
+			else
+				rtab(param, &param->a, 1, 1);
+		}
 	}
 	ft_3arg(param);
-	if (param->b[1] > param->b[0])
-		sb(param, &param->b, 2);
+	if (param->argc == 6)
+	{
+		if (param->b[1] > param->b[0])
+			sb(param, &param->b, 2);
+	}
 	while (param->size_b > 0)
 		pa(param, &param->a, &param->b);
 }

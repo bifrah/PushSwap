@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/08 02:59:22 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/11 01:59:03 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,17 @@ int	main(int argc, char **argv)
 	}
 	if (argc <= 4)
 		ft_3arg(&param);
-	else if (argc == 6)
+	else if (argc == 6 || argc == 5)
 		ft_5arg(&param);
 	else
 		ft_radix(&param, &param.a, &param.b);
 	ft_free_tab(&param);
 }
+
+/*
+to do :
+
+- regler si on donne "" seul ou avec des arguments
+- regler le nombre de coup pour arg 4
+- faire un sort pour 100 arg
+*/
