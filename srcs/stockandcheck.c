@@ -6,19 +6,14 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:39:53 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 14:02:08 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/12 17:03:14 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	create_tabs(t_param *param, int argc, char **argv)
+int	create_tabs(t_param *param, char **argv)
 {
-	if (argc < 3)
-	{
-		ft_putstr_fd("Error\n", 2);
-		return (EMPTY_ARG);
-	}
 	param->a = argv_to_tab(argv + 1, param->size_a);
 	if (!param->a)
 	{

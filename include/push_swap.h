@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:17:12 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/12 15:18:37 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/12 17:03:29 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int			minforassign(long int *tab, int size, int min);
 int			whoismin(long int *tab, int size);
 int			whoisminindex(long int *tab, int size);
 int			whoismax(long int *tab, int size);
-int			create_tabs(t_param *param, int argc, char **argv);
+int			create_tabs(t_param *param, char **argv);
 int			ft_optimize(t_param *param);
 int			ft_argisvalid(char *argv);
 long int	*argv_to_tab(char **argv, int size);
