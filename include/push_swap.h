@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 16:24:45 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 18:26:53 by bifrah           ###   ########.fr       */
+/*   Created: 2022/01/12 15:17:12 by bifrah            #+#    #+#             */
+/*   Updated: 2022/01/12 15:18:37 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include "../libft/libft.h"
 # include <unistd.h>
@@ -65,12 +65,10 @@ void		rr(t_param *param, long int **tab_a, long int **tab_b);
 void		rrtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rrr(t_param *param, long int **tab_a, long int **tab_b);
 
-void		print_tab(int long *tab, int size);
-
-#define ERROR			-2
-#define EMPTY_ARG		-3
-#define INPUT_ERROR		-4
-#define MALLOC_ERROR	-5
-#define SORTED			-6
+# define ERROR			-2
+# define EMPTY_ARG		-3
+# define INPUT_ERROR	-4
+# define MALLOC_ERROR	-5
+# define SORTED			-6
 
 #endif

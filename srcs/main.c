@@ -6,23 +6,11 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 16:36:01 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/11 14:05:47 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/12 15:09:43 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-void	print_tab(int long *tab, int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
-	{
-		printf("%ld\n", tab[i]);
-		i++;
-	}
-}
 
 void	ft_init(t_param *param, int argc)
 {
@@ -102,8 +90,3 @@ int	main(int argc, char **argv)
 		ft_radix(&param, &param.a, &param.b);
 	ft_free_tab(&param);
 }
-
-/*
-to do :
-- faire un sort pour 100 arg
-*/
