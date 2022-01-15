@@ -6,7 +6,7 @@
 /*   By: bifrah <bifrah@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:17:12 by bifrah            #+#    #+#             */
-/*   Updated: 2022/01/12 17:03:29 by bifrah           ###   ########.fr       */
+/*   Updated: 2022/01/15 18:39:10 by bifrah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void		rtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rr(t_param *param, long int **tab_a, long int **tab_b);
 void		rrtab(t_param *param, long int **tab_a, int sizetab, int message);
 void		rrr(t_param *param, long int **tab_a, long int **tab_b);
+void		free_split(char **array);
 
 # define ERROR			-2
 # define EMPTY_ARG		-3
